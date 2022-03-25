@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+body {
+    background-color: #021B24;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons {
+    display: flex;
+    margin-left: auto;
+}
+
+.mainTextInput {
+    background-color: #021B24;
+    color: #ffffff;
+    width: 100%;
+    margin-left: auto;
+    left: 50%;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.mainTextInput::placeholder {
+    color: #304E57;
+    font-weight: 100;
+}
+
+.copiedToast {
+    color: #a5babe;
+    background-color: #304E57;
+    position: fixed;
+    bottom: 10px;
+    right: 45%;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    padding: .5rem 1rem;
+}
