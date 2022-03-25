@@ -18,7 +18,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 1rem;
+  margin: 1rem 2rem 1rem 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -26,6 +35,10 @@ body {
 
 .explanation {
   color: #304E57;
+  margin-left: 1rem;
+  width: 96px;
+  font-size: .75rem;
+  font-weight: 800;
 }
 
 .buttons {
@@ -37,7 +50,7 @@ body {
 
 .mainCTA {
   border: 3px solid #71A479;
-  color: #71A479;
+  color: #ffd6d6;
   font-weight: 800;
   border-radius: .5rem;
   padding: .5rem 1rem;
@@ -82,12 +95,16 @@ body {
 
 .mainTextInput {
   background-color: #042F33;
-  color: #ffffff;
-  width: 100%;
+  color: #ffd6d6;
+  font-family: 'BioRhyme', serif;
+  border-radius: 1rem;
+  width: 90vw;
   height: 70vh;
   margin-left: auto;
+  padding: 2rem;
   left: 50%;
-  font-size: 5rem;
+  font-size: 6rem;
+  line-height: 6rem;
   font-weight: 800;
 }
 
@@ -100,29 +117,30 @@ body {
 
 .mainTextInput::-webkit-input-placeholder {
   color: #304E57;
-  font-weight: 100;
+  font-weight: 800;
 }
 
 .mainTextInput:-ms-input-placeholder {
   color: #304E57;
-  font-weight: 100;
+  font-weight: 800;
 }
 
 .mainTextInput::-ms-input-placeholder {
   color: #304E57;
-  font-weight: 100;
+  font-weight: 800;
 }
 
 .mainTextInput::placeholder {
   color: #304E57;
-  font-weight: 100;
+  font-weight: 800;
 }
 
 .copiedToast {
-  color: #a5babe;
-  background-color: #304E57;
+  color: #fff;
+  background-color: #FF4BED;
   position: fixed;
-  bottom: 10px;
+  border-radius: .25rem;
+  top: 65px;
   right: 45%;
   margin-left: auto;
   width: auto;
