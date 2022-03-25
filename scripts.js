@@ -2,6 +2,7 @@
 var scrambleBtn = document.getElementById('shuffleBtn');
 var textArea = document.getElementById('mainTextInput');
 var clearBtn = document.getElementById('clearBtn');
+var copyBtn = document.getElementById('copyBtn');
 
 // arrays
 const inputWords = [];
@@ -10,8 +11,15 @@ const words = [];
 // event listeners
 scrambleBtn.addEventListener('click', tryWords);
 clearBtn.addEventListener('click', clearTextArea);
+copyBtn.addEventListener('click', copyToClipboard);
+
 
 // functions
+function copyToClipboard() {
+    var copiedText = textArea.value
+    navigator.clipboard.writeText(copiedText);
+}
+
 function tryWords() {
     // separating functions of collecting, splitting, and then adding words to empty array
     var waitingWords = textArea.value;
