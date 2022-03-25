@@ -29,6 +29,26 @@ function copyToClipboard() {
     }, 3000);
 }
 
+document.body.onkeyup = function(e) {
+    if (e.key === " ") {
+        revealMainCTA();
+        console.log("space baR presst")
+    } else {
+        return null;
+    };
+};
+
+
+function revealMainCTA() {
+    var wordCount = textArea.value.split(" ").length;
+    if (wordCount > 1) {
+        scrambleBtn.style.opacity = 1;
+        scrambleBtn.style.transition = "200ms";
+    } else if (wordCount <= 1) {
+        return null;
+    }
+};
+
 function tryWords() {
     // separating functions of collecting, splitting, and then adding words to empty array
     var waitingWords = textArea.value;
@@ -60,4 +80,5 @@ function tryWords() {
 function clearTextArea() {
     textArea.value = "";
     console.log('Text area cleared')
+    scrambleBtn.style.opacity = .2;
 }
