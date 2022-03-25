@@ -3,6 +3,7 @@ var scrambleBtn = document.getElementById('shuffleBtn');
 var textArea = document.getElementById('mainTextInput');
 var clearBtn = document.getElementById('clearBtn');
 var copyBtn = document.getElementById('copyBtn');
+var copyToast = document.getElementById('copiedText');
 
 // arrays
 const inputWords = [];
@@ -18,6 +19,14 @@ copyBtn.addEventListener('click', copyToClipboard);
 function copyToClipboard() {
     var copiedText = textArea.value
     navigator.clipboard.writeText(copiedText);
+    copyToast.style.opacity = 1;
+    copyToast.style.transition = "400ms";
+    copyToast.style.transform = "translateY(-4px)";
+    setTimeout(function() {
+        copyToast.style.opacity = 0;
+        copyToast.style.transition = "400ms";
+        copyToast.style.transform = "translateY(4px)";
+    }, 3000);
 }
 
 function tryWords() {
