@@ -1,22 +1,17 @@
+// interactive elements
 var scrambleBtn = document.getElementById('shuffleBtn');
 var textArea = document.getElementById('mainTextInput');
+var clearBtn = document.getElementById('clearBtn');
+
+// arrays
 const inputWords = [];
 const words = [];
 
-//scrambleBtn.addEventListener('click', scrambleWords);
+// event listeners
 scrambleBtn.addEventListener('click', tryWords);
+clearBtn.addEventListener('click', clearTextArea);
 
-/* function scrambleWords(array) {
-    inputWords.length = 0;    
-    inputWords.push(textArea.value.split(/\s+/));
-    for (var i = inputWords.length; i >= 0; i--) {
-        let randomIndex = Math.floor(Math.random() * i);
-        let currentIndex = inputWords[i];
-        currentIndex = randomIndex;
-        randomIndex = currentIndex;
-    } return array;
-}; */
-
+// functions
 function tryWords() {
     // separating functions of collecting, splitting, and then adding words to empty array
     var waitingWords = textArea.value;
@@ -43,4 +38,9 @@ function tryWords() {
 
     // place new shuffled string back into the text area
     textArea.value = shuffledWords;
+}
+
+function clearTextArea() {
+    textArea.value = "";
+    console.log('Text area cleared')
 }
