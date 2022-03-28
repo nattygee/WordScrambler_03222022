@@ -13,7 +13,7 @@ body {
 .header {
     display: flex;
     flex-direction: row;
-    margin: 1rem 2rem 1rem 2rem;
+    margin: 1rem 2rem 3rem 2rem;
     align-items: center;
 }
 .logo {
@@ -23,7 +23,7 @@ body {
 
 .explanation {
     display: flex;
-    align-items: center
+    align-items: center;
     color: #304E57;
     margin-left: 1rem;
     width: 96px;
@@ -37,9 +37,8 @@ body {
 }
 
 .mainCTA {
-    border: 3px solid #71A479;
-    //background-color: #609b69;
-    color: #ffd6d6;
+    background-color: #71A479;
+    color: #042F33;
     font-weight: 800;
     border-radius: .5rem;
     padding: .5rem 1rem;
@@ -47,27 +46,71 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    opacity: .2;
+    //opacity: .2;
+        &:hover {
+            border-bottom: 3px solid #4b8053;
+        }
+}
+
+.mainCTADisabled {
+    background-color:#03292c;
+    color:#06363a;
+    font-weight: 800;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    margin-left: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    opacity: 1;
+}
+
+.clearBtnDisabled {
+    border: 3px solid #03292c;
+    border-radius: .5rem;
+    padding: .5rem;
+    margin-left: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.copyBtnDisabled {
+    border: 3px solid #03292c;
+    border-radius: .5rem;
+    padding: .5rem;
+    margin-left: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: default;
 }
 
 .clearBtn {
-    border: 3px solid #304E57;
+    border: 3px solid #71A479;
     border-radius: .5rem;
     padding: .5rem;
     margin-left: .5rem;
     display: flex;
     align-items: center;
     cursor: pointer;
+    //opacity: .2;
+        &:hover {
+            background-color: #03292C;
+        }
 }
 
 .copyBtn {
-    border: 3px solid #304E57;
+    border: 3px solid #71A479;
     border-radius: .5rem;
     padding: .5rem;
     margin-left: .5rem;
     display: flex;
     align-items: center;
     cursor: pointer;
+    //opacity: .2;
+        &:hover {
+            background-color: #03292C;
+        }
 }
 
 .mainTextInput {
@@ -77,16 +120,16 @@ body {
     border-radius: 1rem;
     width: 90vw;
     height: 70vh;
-    margin-top: 2rem;
     margin-left: auto;
     padding: 2rem;
     left: 50%;
     font-size: 6rem;
     line-height: 6rem;
     font-weight: 800;
+    caret-color: #304E57;
     &:focus {
         outline: none;
-        background-color: #032c30;
+        background-color: #03292c;
         transition: 100ms;
     }
 }
