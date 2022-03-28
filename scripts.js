@@ -5,6 +5,9 @@ var clearBtn = document.getElementById('clearBtn');
 var copyBtn = document.getElementById('copyBtn');
 var copyToast = document.getElementById('copiedText');
 
+var copyBtnImg = document.getElementById('copyBtnImg');
+var clearBtnImg = document.getElementById('clearBtnImg');
+
 // arrays
 const inputWords = [];
 const words = [];
@@ -42,8 +45,19 @@ document.body.onkeyup = function(e) {
 function revealMainCTA() {
     var wordCount = textArea.value.split(" ").length;
     if (wordCount > 1) {
-        scrambleBtn.style.opacity = 1;
+        scrambleBtn.className = "mainCTA"
+        clearBtn.className = "clearBtn"
+        copyBtn.className = "copyBtn"
+
+        copyBtnImg.src = "images/scrampl_copyBtn.svg"
+        clearBtnImg.src = "images/scrampl_clearBtn.svg"
+        
+        copyBtn.style.transition = "200ms";
+        clearBtn.style.transition = "200ms";
+        copyBtnImg.style.transition = "200ms";
+        clearBtnImg.style.transition = "200ms";
         scrambleBtn.style.transition = "200ms";
+
     } else if (wordCount <= 1) {
         return null;
     }
@@ -80,5 +94,10 @@ function tryWords() {
 function clearTextArea() {
     textArea.value = "";
     console.log('Text area cleared')
-    scrambleBtn.style.opacity = .2;
+    scrambleBtn.className = "mainCTADisabled";
+    clearBtn.className = "clearBtnDisabled";
+    copyBtn.className = "copyBtnDisabled";
+    
+    clearBtnImg.src = "images/scrampl_clearBtn_disabled.svg" 
+    copyBtnImg.src = "images/scrampl_copyBtn_disabled.svg"
 }
